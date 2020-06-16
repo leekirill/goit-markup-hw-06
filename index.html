@@ -74,51 +74,41 @@
             <div class="modal">
               <h2 class="title">Оставьте свои данные, мы вам перезвоним</h2>
                             <button class="close" data-close-modal></button>
-                <form>
-                  <label>
-                    Имя
-                    <input type="name" name="name" id="name">
-                  </label>
-                  <label>
-                    Телефон
-                    <input type="tel" name="tel" id="tel">
-                  </label>
-                  <label>
-                    Почта
-                    <input type="email" name="email" id="email">
-                  </label>
-<textarea name="comment" rows="5" cols="45" placeholder="Оставьте комментарий"></textarea>
+                <form class="js-speaker-form">
+                  <div class="form-field">
+                  <label for="name" class="form-label">Имя</label>
+                  <input type="name" name="name" id="name" class="form-input">
+                  </div>
 
-                  <label type=""></label>
+                  <div class="form-field">
+                  <label for="tel" class="form-label">Телефон</label>
+                  <input type="tel" name="tel" id="tel" class="form-input">
+                  </div>
 
-                    <p>Согласен с рассылкой и принимаю Условия договора</p>
-                    
-                    <label for="policy"></label>
-                    <input id="policy" name="policy" type="checkbox" value="policy" />
-                    <button class="send">Отправить</button>
+                  <div class="form-field">
+                  <label for="email" class="form-label">Почта</label>
+                  <input type="email" name="email" id="email" class="form-input">
+                  </div>
+
+                  <textarea 
+                  name="comment" 
+                  rows="12" 
+                  cols="45" 
+                  placeholder="Комментарий"
+                  class="form-comment">
+                  </textarea>
+
+
+                  <div class="form-policy">
+                 
+                  <input id="policy" name="policy" type="checkbox" value="policy" />
+                  <label for="policy" class="policy-label">Согласен с рассылкой и принимаю Условия договора</label>
+                  </div>
+
+                  <button type="submit" class="send-button">Отправить</button>
+                </form>
             </div>
           </div>
-
-          <script>
-                  const refs = {
-                      openModalBtn: document.querySelector("[data-open-modal]"),
-                      closeModalBtn: document.querySelector("[data-close-modal]"),
-                      backdrop: document.querySelector("[data-backdrop]"),
-                    };
-
-                    refs.openModalBtn.addEventListener("click", toggleModal);
-                    refs.closeModalBtn.addEventListener("click", toggleModal);
-
-                    refs.backdrop.addEventListener("click", logBackdropClick);
-
-                    function toggleModal() {
-                      refs.backdrop.classList.toggle("is-hidden");
-                    }
-
-                    function logBackdropClick() {
-                      console.log("Это клик в бекдроп");
-                    }
-          </script>
 
       <!-- Преимушества -->
 
@@ -470,16 +460,18 @@
           </ul>
           </div>
           <div class="form-div">
+          <b class="action">Подпишитесь на рассылку</b>
           <form>
-            <label class="form">
-              Почта
-              <input type="email" name="email" />
-                          <a href="" class="button">Подписаться
-                            <svg class="icon-send">
-                              <use href="./images/main/sprite.svg#icon-icon-send"></use>
-                            </svg>
-                          </a>
-            </label>
+            <div class="form-field">
+            <label class="form"></label>
+            <input type="email" name="email" class="form-input" placeholder="E-mail"/>
+
+            <button type="submit" class="button">Подписаться
+            <svg class="icon-send">
+            <use href="./images/main/sprite.svg#icon-icon-send"></use>
+            </svg>
+            </button>
+          </div>
           </form>
           </div>
       </div>
@@ -508,5 +500,21 @@
                   console.log("Это клик в бекдроп");
                 }
   </script>
+
+  <script>
+    (() => {
+      document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+
+          e.currentTarget.reset();
+        });
+    })();
+  </script>  
   </body>
 </html>
