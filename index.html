@@ -73,36 +73,51 @@
           <div class="backdrop is-hidden" data-backdrop>
             <div class="modal">
               <h2 class="title">Оставьте свои данные, мы вам перезвоним</h2>
-                            <button class="close" data-close-modal></button>
+                  <button class="close" data-close-modal>
+                    <svg class="icon-close">
+                      <use href="./images/main/modal/close.svg#icon-close"></use>
+                    </svg>
+                  </button>
                 <form class="js-speaker-form">
                   <div class="form-field">
-                  <label for="name" class="form-label">Имя</label>
-                  <input type="name" name="name" id="name" class="form-input">
+                    <input type="name" name="name" id="name" class="form-input" placeholder=" ">
+                    <label for="name" class="form-label">Имя</label>
+                      <svg class="form-icon">
+                        <use href="./images/main/modal/modal-icon.svg#icon-person-black-18dp-1">
+                        </use>
+                      </svg>
                   </div>
 
                   <div class="form-field">
-                  <label for="tel" class="form-label">Телефон</label>
-                  <input type="tel" name="tel" id="tel" class="form-input">
+                    <input type="tel" name="tel" id="tel" class="form-input" placeholder=" ">
+                    <label for="tel" class="form-label">Телефон</label>
+                      <svg class="form-icon">
+                        <use href="./images/main/modal/modal-icon.svg#icon-phone-black-18dp-1">
+                        </use>
+                      </svg>
                   </div>
 
                   <div class="form-field">
-                  <label for="email" class="form-label">Почта</label>
-                  <input type="email" name="email" id="email" class="form-input">
+                    <input type="email" name="email" id="email" class="form-input" placeholder=" ">
+                    <label for="email" class="form-label">Почта</label>
+                    <svg class="form-icon">
+                      <use href="./images/main/modal/modal-icon.svg#icon-email-black-18dp-1">
+                      </use>
+                    </svg>
                   </div>
 
-                  <textarea 
-                  name="comment" 
-                  rows="12" 
-                  cols="45" 
-                  placeholder="Комментарий"
-                  class="form-comment">
-                  </textarea>
+                  <div class="form-field">
+                    <textarea name="comment" rows="10" id="comment" class="form-comment" placeholder=" "></textarea>
+                    <label for="comment" class="label-comment">Комментарий</label>
+                  </div>
 
 
-                  <div class="form-policy">
-                 
-                  <input id="policy" name="policy" type="checkbox" value="policy" />
-                  <label for="policy" class="policy-label">Согласен с рассылкой и принимаю Условия договора</label>
+                  <div class="form-policy">                 
+                    <label class="policy-label">
+                      <input class="checkbox" name="policy" type="checkbox" value="policy" />
+                      <span class="icon"></span>
+                      Согласен с рассылкой и принимаю <a href="">Условия договора</a>
+                    </label>
                   </div>
 
                   <button type="submit" class="send-button">Отправить</button>
@@ -187,7 +202,7 @@
               <li class="person-card">
               <img src="./images/main/person-1.jpg" alt="член команды" class="image">
               <div class="content">
-                <h3 class="name">John Smith</h3>
+                <h3 class="name">Николай Кучеренко</h3>
                 <p class="descript">Product Designer</p>
                 <ul class="social-list">
                   <li class="social-icon">
@@ -224,7 +239,7 @@
               <li class="person-card">
                 <img src="./images/main/person-2.jpg" alt="член команды" class="">
               <div class="content">
-                <h3 class="name">Marta Stewart</h3>
+                <h3 class="name">Ольга Иванова</h3>
                 <p class="descript">Frontend Developer</p>
                 <ul class="social-list">
                   <li class="social-icon">
@@ -261,7 +276,7 @@
               <li class="person-card">
                 <img src="./images/main/person-3.jpg" alt="член команды" class="">
               <div class="content">
-                <h3 class="name">Robert Jakis</h3>
+                <h3 class="name">Андрей Шевченко</h3>
                 <p class="descript">Marketing</p>
                 <ul class="social-list">
                   <li class="social-icon">
@@ -298,7 +313,7 @@
               <li class="person-card">
                 <img src="./images/main/person-4.jpg" alt="член команды" class="">
               <div class="content">
-                <h3 class="name">Martin Doe</h3>
+                <h3 class="name">Иван Николаев</h3>
                 <p class="descript">UI Designer</p>
                 <ul class="social-list">
                   <li class="social-icon">
