@@ -545,20 +545,3 @@ body {
 .footer .form {
   display: block;
 }
-
-.footer .copyright {
-  padding-top: 18px;
-  padding-bottom: 21px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer .copyright-text {
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.4);
-}
